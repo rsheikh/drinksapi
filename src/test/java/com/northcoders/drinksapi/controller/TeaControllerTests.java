@@ -20,7 +20,7 @@ public class TeaControllerTests {
         String expectedContent = "I love tea!";
 
         this.mockMvcController.perform(
-                MockMvcRequestBuilders.get("/tea/tealovers/"))
+                MockMvcRequestBuilders.get("/tea/tealovers"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedContent));
     }
